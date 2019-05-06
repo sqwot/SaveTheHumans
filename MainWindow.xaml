@@ -33,7 +33,7 @@
             <ContentControl Content="ContentControl" Template="{DynamicResource EmptyTemplate}"/>
             <TextBlock TextWrapping="Wrap" Text="Avoid These" RenderTransformOrigin="0.141,0.5" FontSize="18" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
-        <ProgressBar Grid.Column="1" Grid.Row="2" RenderTransformOrigin="-0.85,-0.8" Height="20"/>
+        <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="2" RenderTransformOrigin="-0.85,-0.8" Height="20"/>
         <Canvas x:Name="playArea"
                 Grid.Row="1" Grid.ColumnSpan="3">
             <Canvas.Background>
@@ -47,7 +47,7 @@
                 <Rectangle Fill="White" Height="25" Stroke="Black" Width="10"/>
             </StackPanel>
             <TextBlock x:Name="gameOverText" Canvas.Left="112" TextWrapping="Wrap" Text="Game Over" Canvas.Top="105" FontFamily="Arial Black" FontSize="100" FontWeight="Bold" FontStyle="Italic"/>
-            <Rectangle Height="50" Canvas.Left="560" Stroke="Black" Canvas.Top="25" Width="50" RenderTransformOrigin="0.5,0.5">
+            <Rectangle x:Name="target" Height="50" Canvas.Left="560" Stroke="Black" Canvas.Top="25" Width="50" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
